@@ -1,0 +1,79 @@
+////////////////////////////////////////////////////////////////////////////
+// vscode 编辑器和插件的配置 ////////////////////////////////////////////////
+// 参考：https://blog.csdn.net/weixin_46238462/article/details/125867532 //
+//////////////////////////////////////////////////////////////////////////
+
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.detectIndentation": false,
+  "editor.tabSize": 4,
+  "files.eol": "auto",
+  "eslint.enable": true,
+
+  //////////////////////////////////////////////////////////////////
+  // 官网参考：https://prettier.io/docs/en/options.html#tab-width //
+  ////////////////////////////////////////////////////////////////
+  "prettier.semi": true,
+  "prettier.tabWidth": 4,
+  "prettier.printWidth": 160,
+  "prettier.endOfLine": "auto",
+  "prettier.singleQuote": true,
+  "prettier.ignorePath": ".prettierignore",
+  // Enable the ESlint flat config support
+  // (remove this if your ESLint extension above v3.0.5)
+  "eslint.experimental.useFlatConfig": true,
+
+  // Disable the default formatter, use eslint instead
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+
+  // Auto fix
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+
+  // Silent the stylistic rules in you IDE, but still auto fix them
+  "eslint.rules.customizations": [
+    { "rule": "style/*", "severity": "off" },
+    { "rule": "format/*", "severity": "off" },
+    { "rule": "*-indent", "severity": "off" },
+    { "rule": "*-spacing", "severity": "off" },
+    { "rule": "*-spaces", "severity": "off" },
+    { "rule": "*-order", "severity": "off" },
+    { "rule": "*-dangle", "severity": "off" },
+    { "rule": "*-newline", "severity": "off" },
+    { "rule": "*quotes", "severity": "off" },
+    { "rule": "*semi", "severity": "off" }
+  ],
+
+  // Enable eslint for all supported languages
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml",
+    "toml",
+    "xml",
+    "gql",
+    "graphql",
+    "astro",
+    "css",
+    "less",
+    "scss",
+    "pcss",
+    "postcss"
+],
+"[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+},
+"[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+}
+}
